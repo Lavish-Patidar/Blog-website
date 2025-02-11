@@ -1,0 +1,93 @@
+/* Base styles for create-post-container */
+.post-container {
+    padding: 45px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Light mode styles */
+.post-container .light-mode {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.post-container .light-mode .form-post {
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+/* Dark mode styles */
+.post-container .dark-mode {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+/* Form styles */
+.form-post {
+    display: flex;
+    padding: 25px;
+    border-radius: 8px;
+    width: 94%;
+    max-width: 800px;
+    /* Added max-width for larger screens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.form-post .dark-mode {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.form-post input,
+.form-post textarea {
+    width: 100%;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.form-post textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 900px) {
+    .post-container {
+        padding: 20px 5px;
+    }
+
+    .form-post {
+        width: 98%;
+        padding: 15px;
+    }
+
+    .form-post input,
+    .form-post textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .post-container {
+        padding: 10px 5px;
+    }
+
+    .form-post {
+        padding: 10px;
+    }
+
+    .form-post input,
+    .form-post textarea {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+}

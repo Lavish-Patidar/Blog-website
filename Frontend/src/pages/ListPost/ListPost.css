@@ -1,0 +1,105 @@
+/* Common styles */
+.posts-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.posts-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+}
+
+.post-item {
+    flex: 0 1 350px;
+    /* This makes each post card a fixed width */
+    max-width: 100%;
+}
+
+.post-item h3 {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.post-item p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Light Mode (default) */
+.posts-container .light-mode {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+.light-mode .post-item {
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.light-mode .post-item:hover {
+    transform: translateY(-5px);
+}
+
+.light-mode h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.light-mode h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.light-mode p {
+    color: #666;
+}
+
+/* Dark Mode */
+.posts-container .dark-mode {
+    background-color: #373636;
+    min-height: 100vh;
+}
+
+.dark-mode .post-item {
+    background: #2d2d2d;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.dark-mode .post-item:hover {
+    transform: translateY(-5px);
+}
+
+.dark-mode h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.dark-mode h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.dark-mode p {
+    color: #cccccc;
+}
